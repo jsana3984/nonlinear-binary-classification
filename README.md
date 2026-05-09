@@ -12,18 +12,6 @@ A core component of this project involves estimating true class probabilities an
 * **Advanced Inference:** Extracting standard errors from the asymptotic covariance matrix of the coefficients to compute exact 95% confidence intervals, transforming them via the inverse-logit function.
 * **Model Evaluation:** AUC-ROC, Precision/Recall, F1 Score, and Log-Loss optimization.
 * **Programmatic Reporting:** Automated generation of technical presentation slides with embedded visualizations using `matplotlib.backends.backend_pdf`.
-
-## Repository Structure
-```text
-├── data/                   # Training and testing datasets
-├── src/                    
-│   ├── model_training.py   # Primary analysis, model fitting, and CI generation
-│   └── generate_slides.py  # Code to programmatically generate the PDF report
-├── docs/                   
-│   └── Analysis_Presentation.pdf # Automated 3-slide visual summary
-├── output/                 
-│   └── predictions.csv     # Final probability estimates and confidence bounds
-└── README.md
 ## Methodology & Results
 
 **Exploratory Data Analysis:** Initial analysis revealed a non-linear relationship between the predictors and the response, prompting the introduction of degree-2 polynomial features to capture higher-order dependencies, such as $x_i^2$ and $x_i x_j$.
@@ -39,3 +27,16 @@ A core component of this project involves estimating true class probabilities an
 * **scikit-learn**: Used for model evaluation metrics and QDA baseline implementation.
 * **pandas & numpy**: Essential for data manipulation and numerical computation.
 * **matplotlib & seaborn**: Employed for statistical data visualization and diagnostic plotting.
+
+## Repository Structure
+```text
+├── data/                   # Training and testing datasets
+├── src/                    
+│   ├── model_training.py   # Primary analysis, model fitting, and CI generation
+│   └── generate_slides.py  # Code to programmatically generate the PDF report
+├── docs/                   
+│   └── Analysis_Presentation.pdf # Automated 3-slide visual summary
+├── output/                 
+│   └── predictions.csv     # Final probability estimates and confidence bounds
+└── README.md
+
